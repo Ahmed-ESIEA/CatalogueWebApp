@@ -1,0 +1,23 @@
+<div class="card">
+<div class="card-header">
+Gestion des catégories
+</div>
+<div class="card-body">
+<table class="table" *ngIf="categories">
+  <tr>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let  c of categories._embedded.categories">
+    <td>{{c.name}}</td>
+    <td>
+      <button type="button" class="close" aria-label="Close" (click)="onDeleteCat(c)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </td>
+  </tr>
+
+</table>
+
+</div>
+
+</div>
